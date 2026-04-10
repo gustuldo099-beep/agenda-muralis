@@ -180,6 +180,46 @@ A aplicação abrirá em: `http://localhost:5173`
 
 ---
 
+## Testes
+
+### Backend — Testes de Integração
+
+Os testes de integração cobrem os principais fluxos da API. Para rodar:
+
+```bash
+cd agenda-backend
+mvnw test
+```
+
+**Testes implementados:**
+- ✅ Cadastrar cliente com sucesso
+- ✅ Rejeitar CPF duplicado (RN03)
+- ✅ Listar todos os clientes (RF04)
+- ✅ Buscar cliente por nome (RF05)
+- ✅ Editar cliente com sucesso (RF02)
+- ✅ Excluir cliente com sucesso (RF03)
+- ✅ Rejeitar cliente sem nome (RN01)
+
+### Frontend — Testes de Componentes
+
+Os testes cobrem os componentes principais da interface. Para rodar:
+
+```bash
+cd agenda-frontend
+npx vitest run
+```
+
+**Testes implementados:**
+- ✅ Renderiza formulário de novo cliente
+- ✅ Renderiza formulário de edição com dados preenchidos
+- ✅ Exibe erro quando Nome está vazio
+- ✅ Exibe erro quando CPF está vazio
+- ✅ Botão Voltar chama a função correta
+- ✅ Lista clientes ao carregar a página
+- ✅ Exibe mensagem quando não há clientes
+- ✅ Botão Novo Cliente funciona corretamente
+- ✅ Excluir cliente com confirmação
+
 ## Referências Utilizadas
 
 - [Documentação oficial do Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/)
